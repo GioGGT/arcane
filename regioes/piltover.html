@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <title>Arcane - Piltover</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .fundo {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(../regioesimg/piltover.webp);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: inset 0px 10px 30px 40px rgb(0, 0, 0);
+        }
+
+        .principal {
+            margin-top: 15px;
+            border: 2px solid rgb(37, 37, 35);
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.548);
+            width: 80vw;
+            height: auto;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .principal p {
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 10px;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(222, 223, 224);
+            text-shadow: 2px 2px rgba(26, 25, 25, 0.676);
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Anton SC', serif;
+            font-size: 50px;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.562);
+            color: rgb(222, 223, 224);
+        }
+
+        .outros {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+        }
+
+        .outros a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            height: 40px;
+            width: 140px;
+            font-size: 17px;
+            font-family: Anton SC, serif;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.475);
+            border: 1.5px inset rgb(19, 33, 100);
+            background: linear-gradient(to right, rgb(96, 145, 183), rgb(47, 73, 128), rgb(16, 52, 118));
+            transition: 0.4s;
+        }
+
+        .outros a:hover {
+            width: 143px;
+            font-size: 18.5px;
+            cursor: pointer;
+        }
+
+        footer {
+            color: white;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .redes {
+            font-size: 25px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            height: 30px;
+        }
+
+        .redes a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .redes a:hover {
+            color: rgb(74, 74, 74);
+        }
+
+        footer img {
+            margin: 10px;
+            width: 170px;
+            height: 48px;
+        }
+
+        .direitos {
+            text-align: center;
+            width: 50%;
+            font-size: 12px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        #botao {
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+            margin: 10px;
+            font-size: 20px;
+            font-family: Anton SC, serif;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.475);
+            background: linear-gradient(to right, rgb(183, 183, 96), rgb(128, 128, 47), rgb(118, 118, 16));
+            border: 1.5px inset rgb(146, 146, 4);
+            transition: 0.4s;
+        }
+
+        #botao:hover {
+            color: white;
+            font-size: 21.5px;
+            cursor: pointer;
+        }
+
+        .info {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #retornar {
+            text-decoration: none;
+            margin-bottom: 40px;
+            border: none;
+            background-color: black;
+            padding: 12px;
+            text-align: center;
+            font-family: Anton SC, serif;
+            color: white;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        #retornar:hover {
+            cursor: pointer;
+            color: rgba(99, 99, 99, 0.877);
+        }
+
+        @media (max-width: 950px) and (max-height: 450px) {
+            .fundo{
+                height: 100%;
+            }
+        }
+
+        @media (max-width: 912px) {
+
+            .principal {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .principal p {
+                font-size: 18px;
+                padding: 20px;
+            }
+
+            footer {
+                justify-content: center;
+            }
+
+            .direitos {
+                width: 60%;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .fundo {
+                height: 100%;
+            }
+
+            .principal {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .principal p {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .redes {
+                font-size: 20px;
+            }
+
+            footer img {
+                width: 150px;
+                height: 44px;
+            }
+
+            .direitos {
+                width: 80%;
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="info" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+            <h1>Piltover</h1>
+        </div>
+        <div class="principal" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+            <p>Piltover, the illustrious "City of Progress" in Arcane, stands as a beacon of innovation, elegance, and
+                opportunity. Perched above Zaun, Piltover is a thriving metropolis powered by its mastery of hextech, a
+                revolutionary fusion of magic and technology. Its gleaming spires, polished cobblestone streets, and
+                bustling marketplaces reflect a city that values order, advancement, and wealth.
+
+                Piltover is the heart of trade and invention, with its prestigious Academy attracting the brightest
+                minds from across the world. The city thrives on the ingenuity of its scientists and inventors, who push
+                the boundaries of what is possible. Hexgates, a hallmark of Piltover’s progress, have transformed global
+                commerce, earning the city its nickname as the "Crossroads of the World."</p>
+        </div>
+        <div class="outros" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+            <a href="politicap.html">Piltover's politics</a>
+            <a href="hextec.html">Hextec</a>
+            </button>
+        </div>
+        <a href="citys.html" id="retornar">return to previous page</a>
+    </div>
+    <footer>
+        <div class="redes">
+            <a href="https://youtube.com/playlist?list=PLbAFXJC0J5GYRhFnNllP8ss1moTRwMRBg&si=cumuDVHeKlxEMqgX"
+                target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/arcaneshow/#" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/arcaneshow" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@leagueoflegends" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://lnk.to/ArcaneLeagueofLegends" target="_blank">
+                <i class="fab fa-spotify"></i>
+            </a>
+        </div>
+        <img src="../logos/logobranca.avif">
+        <a href="https://www.netflix.com/br/title/81435684" id="botao">Watch now</a>
+        <div class="direitos">
+            <p>Unofficial site made by fans for academic purposes. ARCANE LEAGUE OF LEGENDS and any associated logos are
+                trademarks, service marks and/or registered trademarks of Riot Games, Inc.</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
